@@ -36,26 +36,28 @@ L’exécutable **T.O.R** est indispensable au fonctionnement d’AurWay.
 Il doit être présent dans le répertoire du projet pour être invoqué automatiquement.
 
 #### Structure du projet :
+```
 AurWay
 ├── src
-├── └── core
-├────── └── __init__.py
-├────── └── peer.py
+│   └── core
+│       ├── __init__.py
+│       └── peer.py
 ├── tor
-├── └── pluggable_transport
-├────── └── conjure-client.exe
-├────── └── lyrebird.exe
-├────── └── pt_config.json
-├────── └── README.CONJURE.md
-├── └── geoip
-├── └── geoip6
-├── └── tor-gencert.exe
-├── └── tor.exe
-├── └── torrc-defaults
-├ LICENSE
-├ main.py
-├ README.md
-├ requirements.txt
+│   ├── pluggable_transport
+│   │   ├── conjure-client.exe
+│   │   ├── lyrebird.exe
+│   │   ├── pt_config.json
+│   │   └── README.CONJURE.md
+│   ├── geoip
+│   ├── geoip6
+│   ├── tor-gencert.exe
+│   ├── tor.exe
+│   └── torrc-defaults
+├── LICENSE
+├── main.py
+├── README.md
+└── requirements.txt
+```
 
 > 💡 Le script principal est configuré pour rechercher le binaire dans le dossier `tor/`.
 
@@ -82,4 +84,14 @@ Pour rejoindre un autre nœud, utilisez le mode connexion ciblée en précisant 
 
 ```bash
 python main.py <PORT_LOCAL_CLIENT> --target <ADRESSE_ONION_CIBLE>:<PORT_CIBLE>
+```
+
+
+## 🌐 Installation rapide
+
+```
+git clone https://github.com/helyio-dev/AurWay.git
+cd AurWay
+pip install -r requirements.txt
+python main.py 9050
 ```
