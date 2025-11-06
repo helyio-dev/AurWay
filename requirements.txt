@@ -1,0 +1,4 @@
+cryptography
+pysocks
+requests
+stem
